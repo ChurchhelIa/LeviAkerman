@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+/*Создайте структуру для хранения комплексных чисел. Структура должна иметь 2
+атрибута: вещественную часть и мнимую. Объявите два числа и получите их
+значения от пользователя.
+Напишите функцию, которая будет умножать комплексные числа.*/
+
+float z,a,b;
+
+struct Kompl {
+   float re;
+   float im;
+
+};
+
+Kompl ch1;
+Kompl ch2;
+
+void pr () {
+   cout << "z1*z2 =" << (ch1.re*ch2.re - ch1.im*ch2.im) << "+" << (ch1.re*ch2.im+ch2.re*ch1.im) <<"*i" << endl;
+}
+
+int main() {
+
+    cout << "Vvedite veshestvennuyu chast shisla 1: ";
+    cin >> ch1.re;
+    cout << "Vvedite mnimuyu chat chisla 1: ";
+    cin >> ch1.im;
+    cout << "Vvedite veshestvennuyu chast shisla 2: ";
+    cin >> ch2.re;
+    cout << "Vvedite mnimuyu chat chisla 2: ";
+    cin >> ch2.im;
+    cout << "z1="<<ch1.re<<"+"<<"i*"<<ch1.im << endl;
+    cout << "z2="<<ch2.re<<"+"<<"i*"<<ch2.im << endl;
+    pr();
+
+return 0;
+}
