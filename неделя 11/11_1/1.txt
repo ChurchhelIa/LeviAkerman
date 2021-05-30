@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//Задание 2. Напишите программу, которая принимает от пользователя координаты точки и
+//определяет, попала ли точка в заштрихованную область.
+//График B
+/*Сделайте рефакторинг задач на проверку нахождения точки в закрашенной области
+из предыдущего домашнего задания. В результате, вместо двух переменных,
+описывающих координаты точки, должна быть одна переменная-структура с
+атрибутами – координатами.*/
+
+struct Point {
+    float x,y;
+};
+float l;
+Point popal;
+
+void uslov() {
+    if (popal.x < popal.y || popal.y > 0) {
+        if (popal.x < sqrt(2) && popal.x > -sqrt(2))
+        {
+            cout << "Tochka popala" << endl;
+        }
+        else
+        {
+            cout << "Tochka ne popala" << endl;
+        }
+    } else
+    {
+        cout << "Tochka ne popala" << endl;
+    }
+}
+
+
+int main() {
+    cout <<"Vvedite koorditati (x;y):"<<endl;
+    cin >> popal.x >> popal.y;
+    uslov();
+    return 0;
+}
