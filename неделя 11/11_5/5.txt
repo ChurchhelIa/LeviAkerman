@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+/* Робот-самолёт описывается как структура с полями: скорость вращения винта,
+радиус винта, коэффициент тяги. Напишите функцию для расчёта тяги,
+создаваемую винтом (произведение всех характеристик)*/
+
+struct Robot {
+    float s;
+    float r;
+    float k;
+};
+    Robot samik;
+
+void func() {
+    cout << "Vvedite skorost vrashenia vinta: ";
+    cin >> samik.s;
+    cout << "Vvedite radius vinta: ";
+    cin >> samik.r;
+    cout << "Vvedite koefficient tyagi samoleta: ";
+    cin >> samik.k;
+    cout << "Tyaga samoleta = " << samik.s*samik.r*samik.k;
+}
+
+
+int main() {
+    func();
+    return 0;
+}
