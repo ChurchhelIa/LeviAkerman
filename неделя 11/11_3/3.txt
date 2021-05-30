@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+/*Имеется информация о датчиках: диапазон измеряемых значений (min, max),
+погрешность, максимальная скорость. Вывести данные о датчике с наименьшей
+скоростью работы.*/
+
+struct chip {
+    float p, s;
+    struct d {
+        int min, max;
+    };
+    d a;
+};
+int d1, d2;
+chip param1;
+chip param2;
+
+
+int main() {
+    cout << "Vvedite dlya datchika 1 parametri min, max, pogresh, speed:" << endl;
+    cout << "min - ";
+    cin >> param1.a.min;
+    cout << "max - ";
+    cin >> param1.a.max;
+    cout << "pogresh - ";
+    cin >> param1.p;
+    cout << "speed - ";
+    cin >> param1.s;
+
+
+    cout << "Vvedite dlya datchika 2 parametri min, max, pogresh, speed:" << endl;
+    cout << "min - ";
+    cin >> param2.a.min;
+    cout << "max - ";
+    cin >> param2.a.max;
+    cout << "pogresh - ";
+    cin >> param2.p;
+    cout << "speed - ";
+    cin >> param2.s;
+
+    cout << endl;
+
+if (param1.s < param2.s)
+    cout << "speed - " << param1.s << "; pogresh - " << param1.p << "; min - " << param1.a.min << "; max - " << param1.a.max;
+else
+    cout << "speed - " << param2.s << "; pogresh - " << param2.p << "; min - " << param2.a.min << "; max - " << param2.a.max;
+}
