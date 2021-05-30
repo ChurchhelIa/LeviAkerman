@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+/*Имеется информация о роботах: габариты, вес, максимальная скорость. Вывести
+данные о самом быстром роботе.
+*/
+
+struct Robot {
+    float gab;
+    float ves;
+    float skorost;
+    int number;
+};
+
+Robot car;
+Robot ship;
+
+int main() {
+
+    cout << "Vvedite skorost robota #1: ";
+    car.number = 1;
+    cin >> car.skorost;
+    cout << "Vvedite gabariti (tri chisla bez probela = x,y,z) robota #1: ";
+    cin >> car.gab;
+    cout << "Vvedite ves robota #1: ";
+    cin >> car.ves;
+    cout << "Vvedite skorost robota #2: ";
+    ship.number = 2;
+    cin >> ship.skorost;
+    cout << "Vvedite gabariti (tri chisla bez probela = x,y,z) robota #2: ";
+    cin >> ship.gab;
+    cout << "Vvedite ves robota #2: ";
+    cin >> ship.ves;
+
+    if (car.skorost > ship.skorost)
+        cout << "Robot car bistree, ego parametri: " << "skorost=" << car.skorost << "; ves=" << car.ves <<"; gabariti="<< car.gab<< "number="<<car.number;
+    else
+        cout << "Robot ship bistree, ego parametri: " << "skorost=" << ship.skorost << "; ves=" << ship.ves <<"; gabariti="<< ship.gab<< "number="<<ship.number;
+
+    return 0;
+}
