@@ -1,0 +1,47 @@
+#include <ctime>
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+/* В квадратной матрице, найти сумму отрицательных элементов, лежащих на главной
+диагонали*/
+
+
+const int r = 4;  
+const int c = 4;  
+int m[r][c];
+int diag[r];
+int summa = 0;
+
+void summ(){
+    for (int i = 0; i < r; i++) {
+        diag[i] = m[i][i];
+        if (diag[i] < 0)
+        summa += diag[i];
+        }
+    cout << "summa otricatelnih chisel glavnoi diagonali: " << summa;
+}
+
+int main() {
+
+    srand(time(0)); // инициализация генерации случайных чисел
+
+    for (int i=0; i<r; i++) {                              
+        for (int j=0; j<c; j++) {
+            m[i][j] = rand()% 120 * (-1) + rand() % 100;
+            cout << m[i][j] << " ";
+        }
+    cout << endl;
+    }
+
+    cout << endl;
+        cout << "glavnaya diagonal: ";                                         
+        for (int i=0; i<r; i++) {
+            diag[i] = m[i][i];
+            cout << diag[i] << " ";
+    }
+    cout << endl;
+
+    summ();
+}
